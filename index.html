@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,7 +34,30 @@
             background: rgb(255, 255, 255);
             backdrop-filter: blur(20px);
             box-shadow: 0px 4px 9px rgba(255, 255, 255, 0.5);
+            z-index: 1000;
         }
+        .img-fluid:hover {
+            transform: scale(1.05);
+            transition: all 0.4s ease-in-out;
+            z-index: 1; 
+        }  
+  
+        .card:hover {
+            box-shadow: 0px 2px 4px rgba(252, 2, 2, 0.2);
+            transform: scale(1.05);
+            transition: all 0.4s ease-in-out;
+        }
+    
+        .section-heading {
+           margin-top: 50px; 
+            margin-bottom: 20px; 
+        }
+
+        .img-container {
+            margin-bottom: 30px; 
+            text-align: center;
+        }
+    
 
         .navbar-nav .nav-link {
             color: #000169;
@@ -62,6 +86,7 @@
             transform: scale(1.05);
             transition: all 0.4s ease-in-out;
         }
+
         .card:hover {
             box-shadow: 0px 2px 4px rgba(252, 2, 2, 0.2);
             transform: scale(1.05);
@@ -80,204 +105,229 @@
             justify-content: center;
             width: 100%;
         }
-        @media (max-width: 991px) {
-        .hero-nav {
-            position: fixed;
-            top: 0;
-            background: rgba(255, 255, 255, 0.95) !important;
-            z-index: 1000;
-        }
-        
-        .navbar-nav {
-            text-align: center;
-            background: rgba(255, 255, 255, 0.95);
-            padding: 20px;
-            margin-top: 15px;
-            border-radius: 10px;
-        }
-        
-        .navbar-brand.ms-auto {
-            display: none;
-        }
-        
-        .nav-item {
-            margin: 10px 0;
-        }
-        
-        #hero {
-            padding-top: 80px;
-        }
-    }
 
-    @media (min-width: 992px) {
-        .navbar-nav {
-            margin: 0 auto;
+        @media (max-width: 991px) {
+            .hero-nav {
+                position: fixed;
+                top: 0;
+                background: rgba(255, 255, 255, 0.95) !important;
+                z-index: 1000;
+            }
+
+            .navbar-nav {
+                text-align: center;
+                background: rgba(255, 255, 255, 0.95);
+                padding: 20px;
+                margin-top: 15px;
+                border-radius: 10px;
+            }
+
+            .navbar-brand.ms-auto {
+                display: none;
+            }
+
+            .nav-item {
+                margin: 10px 0;
+            }
+
+            #hero {
+                padding-top: 80px;
+            }
         }
-    }
+
+        @media (min-width: 992px) {
+            .navbar-nav {
+                margin: 0 auto;
+            }
+        }
     </style>
 </head>
+
 <body data-bs-spy="scroll" data-bs-target="#navbar">
 
-<section id="hero">
-    <nav class="navbar navbar-expand-lg navbar-light hero-nav">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="pcsirlogo.png" alt="Logo" width="75">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+    <section id="hero">
+        <nav class="navbar navbar-expand-lg navbar-light hero-nav">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="pcsirlogo.png" alt="Logo" width="75">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#hero">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#objectives">Objectives</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#achievements">Achievements</a>
-                    </li>
-                </ul>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#hero">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#objectives">Objectives</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#achievements">Achievements</a>
+                        </li>
+                    </ul>
+                </div>
+                <a class="navbar-brand d-none d-lg-block" href="#">
+                    <img src="most.png" alt="Logo Right" width="75">
+                </a>
             </div>
-            <a class="navbar-brand d-none d-lg-block" href="#">
-                <img src="most.png" alt="Logo Right" width="75">
-            </a>
-        </div>
-    </nav>
-    <div class="container d-flex align-items-center justify-content-center mt-6" style="min-height: 100vh;">
-        <div class="row text-center">
-            <div class="col-lg-12">
-                <h1 class="display-4 mb-4" style="font-weight:400;">Welcome to PSDP Project (NCHM)</h1>
-                <p class="lead mb-4" style="font-weight: 500;">The National Centre for Herbal Medicine (NCHM) is the project dedicated to the research, development, and promotion of herbal medicine and natural remedies. Its primary focus is to study the medicinal properties of plants and develop standardized methods for their effective use in healthcare.</p>
+        </nav>
+        <div class="container d-flex align-items-center justify-content-center mt-6" style="min-height: 100vh;">
+            <div class="row text-center">
+                <div class="col-lg-12">
+                    <h1 class="display-4 mb-4" style="font-weight:400;">Welcome to PSDP Project (NCHM)</h1>
+                    <p class="lead mb-4" style="font-weight: 500;">The National Centre for Herbal Medicine (NCHM) is the
+                        project dedicated to the research, development, and promotion of herbal medicine and natural
+                        remedies. Its primary focus is to study the medicinal properties of plants and develop
+                        standardized methods for their effective use in healthcare.</p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section id="about" class="py-5">
-    <div class="container py-5">
-        <div class="row align-items-center flex-md-row-reverse">
-            <div class="col-md-6 text-center">
-                <img src="img.jpg" alt="About Us" class="img-fluid rounded shadow">
-            </div>
-            <div class="col-md-6">
-                <h2 class="display-5 mb-4 mr-5">About Us</h2>
-                <p class="lead text-justify"  style="text-align: justify;">
-                    Pakistan Council of Scientific and Industrial Research (PCSIR) was established in 1953 under Societies Act to promote the cause of Science and Technology in the country. Since 1973, it is functioning under the Act of Parliament, which was amended in 1984. Chief Executive of the Council is the Chairman who is appointed by the Federal Government.
-                </p>
-                <p class="text-justify"  style="text-align: justify;">
-                    There are eleven Laboratories / Units and five HRD Centres established throughout the country, headed by Director Generals / Directors who directly report to the Chairman. In Head Office 150 officers / staff including 07 Directors are working in different divisions / wings. There are 570 Scientists / Engineers / Technologists working in different Laboratories supported by 859 technicians/skilled workers/supporting staff and 1125 non-technical (administrative/ accounts / security etc.) staff.
-                </p>
+    <section id="about" class="py-5">
+        <div class="container py-5">
+            <div class="row align-items-center flex-md-row-reverse">
+                <div class="col-md-6 text-center">
+                    <img src="img.jpg" alt="About Us" class="img-fluid rounded shadow" width="550">
+                </div>
+                <div class="col-md-6">
+                    <h2 class="display-5 mb-4 mr-5">About Us</h2>
+                    <p class="lead text-justify" style="text-align: justify;">
+                        Pakistan Council of Scientific and Industrial Research (PCSIR) was established in 1953 under
+                        Societies Act to promote the cause of Science and Technology in the country. Since 1973, it is
+                        functioning under the Act of Parliament, which was amended in 1984. Chief Executive of the
+                        Council is the Chairman who is appointed by the Federal Government.
+                    </p>
+                    <p class="text-justify" style="text-align: justify;">
+                        There are eleven Laboratories / Units and five HRD Centres established throughout the country,
+                        headed by Director Generals / Directors who directly report to the Chairman. In Head Office 150
+                        officers / staff including 07 Directors are working in different divisions / wings. There are
+                        570 Scientists / Engineers / Technologists working in different Laboratories supported by 859
+                        technicians/skilled workers/supporting staff and 1125 non-technical (administrative/ accounts /
+                        security etc.) staff.
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 
 <section id="objectives" class="py-5 bg-primary text-light">
-    <div class="container py-5">
-        <h2 class="text-center mb-5 display-5 text-uppercase">Our Core Objectives</h2>
+    <div class="container py-3">
+        <h2 class="text-center mb-5 display-5 text-uppercase section-heading">Our Core Objectives</h2>
 
-
-        <div class="row align-items-center mb-5">
-            <div class="col-md-6 text-center">
-                <img src="Picture3.jpg" class="img-fluid rounded shadow-lg" alt="Objective 1" style="border: 5px solid #fff; box-shadow: 0 8px 16px rgba(0,0,0,0.1); width: 80%;">
+        <div class="row align-items-center mb-5 ">
+            <div class="col-md-6 img-container">
+                <img src="Picture3.jpg" class="img-fluid rounded shadow-lg" alt="Objective 1"
+                    style="border: 5px solid #fff; box-shadow: 0 8px 16px rgba(0,0,0,0.1); width: 80%;">
             </div>
             <div class="col-md-6">
                 <h3 class="text-warning font-weight-bold">Promote Research and Innovation in Herbal Medicine</h3>
-                <p class="lead text-justify" style="text-align: justify;">The NCHM aims to advance scientific research in herbal medicine by exploring the medicinal properties of various plants and developing innovative methods for their application in healthcare. This includes conducting clinical trials, formulating new herbal products, and improving the efficacy of traditional remedies.</p>
+                <p class="lead text-justify" style="text-align: justify;">The NCHM aims to advance scientific research
+                    in herbal medicine by exploring the medicinal properties of various plants and developing innovative
+                    methods for their application in healthcare. This includes conducting clinical trials, formulating
+                    new herbal products, and improving the efficacy of traditional remedies.</p>
             </div>
         </div>
 
         <div class="row align-items-center mb-5 flex-md-row-reverse">
-            <div class="col-md-6 text-center">
-                <img src="Picture2.jpg" class="img-fluid rounded shadow-lg" alt="Objective 2" style="border: 5px solid #fff; box-shadow: 0 8px 16px rgba(0,0,0,0.1);">
+            <div class="col-md-6 img-container">
+                <img src="Picture2.jpg" class="img-fluid rounded shadow-lg" alt="Objective 2"
+                    style="border: 5px solid #fff; box-shadow: 0 8px 16px rgba(0,0,0,0.1); width: 80%">
             </div>
             <div class="col-md-6">
                 <h3 class="text-warning font-weight-bold">Standardize Herbal Medicine Practices</h3>
-                <p class="lead text-justify"  style="text-align: justify;">The NCHM strives to create standardized guidelines and protocols for the preparation and use of herbal medicines, ensuring their safety, quality, and effectiveness. This objective aims to bridge the gap between traditional knowledge and modern scientific practices to make herbal treatments more reliable and widely accepted.</p>
+                <p class="lead text-justify" style="text-align: justify;">The NCHM strives to create standardized
+                    guidelines and protocols for the preparation and use of herbal medicines, ensuring their safety,
+                    quality, and effectiveness. This objective aims to bridge the gap between traditional knowledge and
+                    modern scientific practices to make herbal treatments more reliable and widely accepted.</p>
             </div>
         </div>
 
         <div class="row align-items-center">
-            <div class="col-md-6 text-center">
-                <img src="Picture1.jpg" class="img-fluid rounded shadow-lg" alt="Objective 3" style="border: 5px solid #fff; box-shadow: 0 8px 16px rgba(0,0,0,0.1);">
+            <div class="col-md-6 img-container mb-5">
+                <img src="Picture1.jpg" class="img-fluid rounded shadow-lg" alt="Objective 3"
+                    style="border: 5px solid #fff; box-shadow: 0 8px 16px rgba(0,0,0,0.1); width: 80%">
             </div>
             <div class="col-md-6">
                 <h3 class="text-warning font-weight-bold">Raise Public Awareness and Education</h3>
-                <p class="lead text-justify"  style="text-align: justify;">The NCHM works to increase public awareness about the benefits of herbal medicine through educational programs, workshops, and outreach activities. This objective focuses on promoting informed decisions regarding natural health treatments, as well as encouraging sustainable use of herbal resources.</p>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-<section id="achievements" class="py-5">
-    <div class="container py-5">
-        <h2 class="text-center mb-5 display-5">Our Achievements</h2>
-        <div class="row g-4">
-            <div class="col-md-4">
-                <div class="card text-center py-4 ">
-                    <div class="card-body">
-                        <h3 class="display-6 text-primary">150+</h3>
-                        <p class="fs-5">Successful Projects</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card text-center py-4">
-                    <div class="card-body">
-                        <h3 class="display-6 text-primary">200+</h3>
-                        <p class="fs-5">Happy Clients</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card text-center py-4 ">
-                    <div class="card-body">
-                        <h3 class="display-6 text-primary">10+</h3>
-                        <p class="fs-5">Years of Experience</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card text-center py-4 ">
-                    <div class="card-body">
-                        <h3 class="display-6 text-primary">GCMS</h3>
-                        <p class="fs-5">State of the Art Analytical Chemistry Lab </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card text-center py-4">
-                    <div class="card-body">
-                        <h3 class="display-6 text-primary">HPLC </h3>
-                        <p class="fs-5">State of the Art Analytical Chemistry Lab </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card text-center py-4">
-                    <div class="card-body">
-                        <h3 class="display-6 text-primary">Atomic absorption</h3>
-                        <p class="fs-5">State of the Art Analytical Chemistry Lab </p>
-                    </div>
-                </div>
+                <p class="lead text-justify" style="text-align: justify;">The NCHM works to increase public awareness
+                    about the benefits of herbal medicine through educational programs, workshops, and outreach
+                    activities. This objective focuses on promoting informed decisions regarding natural health
+                    treatments, as well as encouraging sustainable use of herbal resources.</p>
             </div>
         </div>
     </div>
 </section>
 
-<footer>
-    <p>Design & Developerd By Mr. Nasim Jan Khalil &copy; 2025 PCSIR. All Rights Reserved.</p>
-</footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <section id="achievements" class="py-5">
+        <div class="container py-5">
+            <h2 class="text-center mb-5 display-5">Our Achievements</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card text-center py-4 ">
+                        <div class="card-body">
+                            <h3 class="display-6 text-primary">150+</h3>
+                            <p class="fs-5">Successful Projects</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-center py-4">
+                        <div class="card-body">
+                            <h3 class="display-6 text-primary">200+</h3>
+                            <p class="fs-5">Happy Clients</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-center py-4 ">
+                        <div class="card-body">
+                            <h3 class="display-6 text-primary">10+</h3>
+                            <p class="fs-5">Years of Experience</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-center py-4 ">
+                        <div class="card-body">
+                            <h3 class="display-6 text-primary">GCMS</h3>
+                            <p class="fs-5">State of the Art Analytical Chemistry Lab </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-center py-4">
+                        <div class="card-body">
+                            <h3 class="display-6 text-primary">HPLC </h3>
+                            <p class="fs-5">State of the Art Analytical Chemistry Lab </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-center py-4">
+                        <div class="card-body">
+                            <h3 class="display-6 text-primary">Atomic absorption</h3>
+                            <p class="fs-5">State of the Art Analytical Chemistry Lab </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Design & Developerd By Mr. Nasim Jan Khalil &copy; 2025 PCSIR. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
+
 </html>
